@@ -61,7 +61,7 @@
     <SolidColorBrush x:Key="TransGrayColor">#B2878789</SolidColorBrush>
     <SolidColorBrush x:Key="TransDarkGrayColor">#E5303030</SolidColorBrush>
     <SolidColorBrush x:Key="SuperTransGrayColor">#4C303030</SolidColorBrush>
-    <SolidColorBrush x:Key="SuperTransWhiteColor">#33FFFFFF</SolidColorBrush>
+    <SolidColorBrush x:Key="SuperTransWhiteColor">#72FFFFFF</SolidColorBrush>
     <SolidColorBrush x:Key="TransBlackColor">#CC1A1A1A</SolidColorBrush>
     <SolidColorBrush x:Key="BrightRedColor">#FFFF0000</SolidColorBrush>
     <SolidColorBrush x:Key="RedColor">#FF870000</SolidColorBrush>

@@ -55,14 +55,42 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="GUI\Helpers\Navigation.cs" />
+    <Compile Include="GUI\Helpers\UINavigation.cs" />
+    <Compile Include="GUI\Icons\MessageIcon.xaml.cs">
+      <DependentUpon>MessageIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Pages\LockPage.xaml.cs">
+      <DependentUpon>LockPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Pages\WidgetPage.xaml.cs">
+      <DependentUpon>WidgetPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Panels\Screens\Screen1.xaml.cs">
+      <DependentUpon>Screen1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Main\GV.cs" />
     <Compile Include="Services\GUIUpdateService.cs" />
     <Compile Include="Theme\CustomControls\FaderFrame.cs" />
+    <Page Include="GUI\Icons\MessageIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Pages\LockPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\Pages\MainPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Pages\WidgetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Panels\Screens\Screen1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -111,10 +139,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\Icons\" />
-    <Folder Include="GUI\Panels\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Resources\Wallpaper\wallpaper1.jpg" />
   </ItemGroup>

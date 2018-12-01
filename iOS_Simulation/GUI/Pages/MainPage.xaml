@@ -4,9 +4,40 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:iOS_Simulation.GUI.Pages"
+             xmlns:icons="clr-namespace:iOS_Simulation.GUI.Icons"
              mc:Ignorable="d" 
-             d:DesignHeight="870" d:DesignWidth="500">
+             d:DesignHeight="950" d:DesignWidth="500">
     <Grid>
-            
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="WallPaper" Grid.Row="0" Grid.RowSpan="2" Panel.ZIndex="-2" Opacity="0.7" >
+            <Image Stretch="Fill" Source="/iOS_Simulation;component/Resources/Wallpaper/wallpaper1.jpg" />
+            <Border Background="#4CFFFFFF" />
+        </Grid>
+        <Grid x:Name="Grid_appsHolder" />
+        <Grid x:Name="Grid_dock" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border CornerRadius="27" Background="{DynamicResource SuperTransWhiteColor}" Grid.ColumnSpan="4" Margin="8"></Border>
+
+            <Grid Margin="20 20 10 20">
+                <icons:MessageIcon />
+            </Grid>
+            <Grid Margin="10 20 10 20" Grid.Column="1">
+                <icons:MessageIcon />
+            </Grid>
+            <Grid Margin="10 20 10 20" Grid.Column="2">
+                <icons:MessageIcon />
+            </Grid>
+            <Grid Margin="10 20 20 20" Grid.Column="3">
+                <icons:MessageIcon />
+            </Grid>
+        </Grid>
     </Grid>
 </UserControl>

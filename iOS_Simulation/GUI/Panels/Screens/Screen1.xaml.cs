@@ -13,18 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace iOS_Simulation.GUI.Pages
+namespace iOS_Simulation.GUI.Panels.Screens
 {
     /// <summary>
-    /// Interaction logic for MainPage.xaml
+    /// Interaction logic for Screen1.xaml
     /// </summary>
-    public partial class MainPage : UserControl
+    public partial class Screen1 : UserControl
     {
-        public static Uri pageUri = new Uri("/GUI/Pages/MainPage.xaml", UriKind.Relative);
-        public static MainPage mMainPage = null;
-        public MainPage()
+        public Screen1()
         {
-            mMainPage = this;
             InitializeComponent();
         }
     }

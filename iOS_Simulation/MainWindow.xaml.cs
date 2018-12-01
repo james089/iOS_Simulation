@@ -13,6 +13,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using iOS_Simulation.GUI.Pages;
+using iOS_Simulation.GUI.Helpers;
 
 namespace iOS_Simulation
 {
@@ -33,6 +35,12 @@ namespace iOS_Simulation
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             GUIUpdateService.StartUpdateRoutine();
+
+            Uri homeUri = MainPage.pageUri;
+            Frame pFrame = mFrame;
+
+            UINavigation.navControl = new UINavigation(homeUri, pFrame);
+            UINavigation.GoToHomePage();
         }
 
         private void Grid_titleBar_MouseDown(object sender, MouseButtonEventArgs e)

@@ -13,19 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace iOS_Simulation.GUI.Pages
+namespace iOS_Simulation.GUI.Icons
 {
     /// <summary>
-    /// Interaction logic for MainPage.xaml
+    /// Interaction logic for MessageIcon.xaml
     /// </summary>
-    public partial class MainPage : UserControl
+    public partial class MessageIcon : UserControl
     {
-        public static Uri pageUri = new Uri("/GUI/Pages/MainPage.xaml", UriKind.Relative);
-        public static MainPage mMainPage = null;
-        public MainPage()
+        public MessageIcon()
         {
-            mMainPage = this;
             InitializeComponent();
         }
+
+        public event EventHandler IsPressed;
+        private void Btn_enter_Click(object sender, RoutedEventArgs e)
+        {
+            if (this.IsPressed != null)
+                this.IsPressed(new object(), new EventArgs());
+        }
+
     }
 }

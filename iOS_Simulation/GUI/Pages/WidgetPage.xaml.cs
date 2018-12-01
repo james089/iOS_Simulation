@@ -16,15 +16,12 @@ using System.Windows.Shapes;
 namespace iOS_Simulation.GUI.Pages
 {
     /// <summary>
-    /// Interaction logic for MainPage.xaml
+    /// Interaction logic for WidgetPage.xaml
     /// </summary>
-    public partial class MainPage : UserControl
+    public partial class WidgetPage : Page
     {
-        public static Uri pageUri = new Uri("/GUI/Pages/MainPage.xaml", UriKind.Relative);
-        public static MainPage mMainPage = null;
-        public MainPage()
+        public WidgetPage()
         {
-            mMainPage = this;
             InitializeComponent();
         }
     }
