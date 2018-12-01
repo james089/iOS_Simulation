@@ -7,17 +7,22 @@
         xmlns:customcontrols="clr-namespace:iOS_Simulation.Theme.CustomControls"
         mc:Ignorable="d"
         Title="MainWindow" Height="1050" Width="500" WindowStartupLocation="CenterScreen" 
-        AllowsTransparency="True" Topmost="True" ResizeMode="NoResize" WindowStyle="None" Background="#FF464646" Loaded="Window_Loaded" >
+        AllowsTransparency="True" Topmost="True" ResizeMode="NoResize" WindowStyle="None" Background="Transparent" Loaded="Window_Loaded" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <Border Grid.RowSpan="1" CornerRadius="50">
+        <Border Margin="32">
             <Border.Background>
                 <ImageBrush ImageSource="Resources/Wallpaper/wallpaper1.jpg"/>
             </Border.Background>
-            <Grid >
+        </Border>
+        <Border Grid.RowSpan="1" CornerRadius="50">
+            <Border.Background>
+                <ImageBrush ImageSource="Resources/IPhone_X.png"/>
+            </Border.Background>
+            <Grid Margin="32">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="*"/>

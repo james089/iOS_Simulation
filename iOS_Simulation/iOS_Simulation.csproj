@@ -139,7 +139,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\IPhone_X.png" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Wallpaper\wallpaper1.jpg" />
   </ItemGroup>
