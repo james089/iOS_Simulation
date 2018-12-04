@@ -47,5 +47,37 @@ namespace iOS_Simulation
         {
             DragMove();
         }
+
+
+        #region Gestures
+        public enum GestureType
+        {
+            swipeUpFromBottomEdge,
+            swipeRightFromLeftEdge
+        }
+        bool isGestureStarted = false;
+        bool isMouseDown = false;
+        Point startPoint = new Point(0, 0);
+        private void Grid_gestureArea_bottom_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            isMouseDown = true;
+            lbl_debug.Content = $"{e.GetPosition(Grid_wholeSimulationArea).X}, {e.GetPosition(Grid_wholeSimulationArea).Y}";
+        }
+        #endregion Gestures
+
+        private void Grid_gestureArea_bottom_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+
+        }
+
+        private void Grid_gestureArea_bottom_MouseMove(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private double GetDistance(Point p1, Point p2)
+        {
+            return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
+        }
     }
 }

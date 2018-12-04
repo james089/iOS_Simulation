@@ -13,24 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace iOS_Simulation.GUI.Icons
+namespace iOS_Simulation.GUI.Panels.SystemPanels
 {
     /// <summary>
-    /// Interaction logic for MessageIcon.xaml
+    /// Interaction logic for ScreenSwitcher.xaml
     /// </summary>
-    public partial class MessageIcon : UserControl
+    public partial class ScreenSwitcher : UserControl
     {
-        public MessageIcon()
+        public ScreenSwitcher()
         {
             InitializeComponent();
         }
-
-        public event EventHandler IsPressed;
-        private void Btn_enter_Click(object sender, RoutedEventArgs e)
-        {
-            if (this.IsPressed != null)
-                this.IsPressed(new object(), new EventArgs());
-        }
-
     }
 }

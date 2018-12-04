@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="iOS_Simulation.GUI.Icons.Apps.CameraIcon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:iOS_Simulation.GUI.Icons.Apps"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="Grid_dewaxLine" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <Viewbox Grid.ColumnSpan="2">
+                <Viewbox.Effect>
+                    <DropShadowEffect Direction="0" Opacity="0.2" ShadowDepth="0" BlurRadius="10"/>
+                </Viewbox.Effect>
+                <Grid Height="300" Width="300">
+                    <Grid Height="280" Width="280">
+                        <Border x:Name="ICON_background" CornerRadius="60" Grid.RowSpan="2" Grid.ColumnSpan="2" >
+                 
+                        </Border>
+                        <Image Source="/iOS_Simulation;component/Resources/APP_icons/camera.png" />
+                        <Grid x:Name="CornerSign" Visibility="Collapsed" Width="auto" MinWidth="90" Height="90" HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,-40,-40,0">
+                            <Rectangle Fill="Red" RadiusX="45" RadiusY="45" />
+                            <Label x:Name="CornerSignValue" Content="0" FontSize="50" FontFamily="Arial" Margin="10, 0" Foreground="White"/>
+                        </Grid>
+                    </Grid>
+                </Grid>
+            </Viewbox>
+            <Border Background="{DynamicResource SuperTransGrayColor}" Grid.Row="1" Grid.RowSpan="2" CornerRadius="{DynamicResource CornerRadius}" Visibility="Collapsed"/>
+            <Label x:Name="IconLabel" Content="Messages" Grid.Row="1" Grid.ColumnSpan="1" Visibility="Collapsed"/>
+            <Button x:Name="Btn_enter" Style="{DynamicResource Button_transparent}" Grid.ColumnSpan="2" Click="Btn_enter_Click"/>
+        </Grid>
+    </Grid>
+
+</UserControl>

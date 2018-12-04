@@ -56,8 +56,29 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="GUI\Helpers\UINavigation.cs" />
-    <Compile Include="GUI\Icons\MessageIcon.xaml.cs">
+    <Compile Include="GUI\Icons\Apps\CalendarIcon.xaml.cs">
+      <DependentUpon>CalendarIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Icons\Apps\CameraIcon.xaml.cs">
+      <DependentUpon>CameraIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Icons\Apps\WeatherIcon.xaml.cs">
+      <DependentUpon>WeatherIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Icons\Apps\SettingIcon.xaml.cs">
+      <DependentUpon>SettingIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Icons\Apps\PhotosIcon.xaml.cs">
+      <DependentUpon>PhotosIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Icons\Apps\MessageIcon.xaml.cs">
       <DependentUpon>MessageIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Icons\Apps\BaseIcon.xaml.cs">
+      <DependentUpon>BaseIcon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Icons\SystemStatus\Signal.xaml.cs">
+      <DependentUpon>Signal.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\Pages\LockPage.xaml.cs">
       <DependentUpon>LockPage.xaml</DependentUpon>
@@ -71,10 +92,41 @@
     <Compile Include="GUI\Panels\Screens\Screen1.xaml.cs">
       <DependentUpon>Screen1.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Panels\SystemPanels\ScreenSwitcher.xaml.cs">
+      <DependentUpon>ScreenSwitcher.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Main\GV.cs" />
     <Compile Include="Services\GUIUpdateService.cs" />
     <Compile Include="Theme\CustomControls\FaderFrame.cs" />
-    <Page Include="GUI\Icons\MessageIcon.xaml">
+    <Page Include="GUI\Icons\Apps\CalendarIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Icons\Apps\CameraIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Icons\Apps\WeatherIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Icons\Apps\SettingIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Icons\Apps\PhotosIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Icons\Apps\MessageIcon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="GUI\Icons\Apps\BaseIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Icons\SystemStatus\Signal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -91,6 +143,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\Panels\Screens\Screen1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Panels\SystemPanels\ScreenSwitcher.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -144,6 +200,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Wallpaper\wallpaper1.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\APP_icons\appStore.png" />
+    <Resource Include="Resources\APP_icons\message.png" />
+    <Resource Include="Resources\APP_icons\weather.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\APP_icons\camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\APP_icons\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\APP_icons\photos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

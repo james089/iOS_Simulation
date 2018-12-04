@@ -42,7 +42,7 @@ namespace iOS_Simulation.Services
 
         private static void mUpdateRoutine_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            mMainWindow.lbl_time.Content = $"{DateTime.Now : hh:mm}";
+            mMainWindow.lbl_time.Content = $"{DateTime.Now : h:mm}";
         }
 
         private static void mUpdateRoutine_WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

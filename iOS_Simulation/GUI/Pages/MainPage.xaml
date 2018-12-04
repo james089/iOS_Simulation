@@ -4,20 +4,27 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:iOS_Simulation.GUI.Pages"
-             xmlns:icons="clr-namespace:iOS_Simulation.GUI.Icons"
+             xmlns:icons="clr-namespace:iOS_Simulation.GUI.Icons.Apps"
+             xmlns:screens="clr-namespace:iOS_Simulation.GUI.Panels.Screens"
              mc:Ignorable="d" 
              d:DesignHeight="950" d:DesignWidth="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="6*"/>
+            <RowDefinition Height="0.2*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid x:Name="WallPaper" Grid.Row="0" Grid.RowSpan="2" Panel.ZIndex="-2" Opacity="0" >
             <Image Stretch="Fill" Source="/iOS_Simulation;component/Resources/Wallpaper/wallpaper1.jpg" />
             <Border Background="#4CFFFFFF" />
         </Grid>
-        <Grid x:Name="Grid_appsHolder" />
-        <Grid x:Name="Grid_dock" Grid.Row="1">
+        <Grid x:Name="Grid_appsHolder" >
+            <screens:Screen1 />
+        </Grid>
+        <Grid x:Name="Grid_screenSwitcher" Grid.Row="1">
+            
+        </Grid>
+        <Grid x:Name="Grid_dock" Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -29,14 +36,14 @@
             <Grid Margin="20 20 10 20">
                 <icons:MessageIcon />
             </Grid>
-            <Grid Margin="10 20 10 20" Grid.Column="1">
-                <icons:MessageIcon />
+            <Grid Margin="15 20 15 20" Grid.Column="1">
+                <icons:PhotosIcon />
             </Grid>
-            <Grid Margin="10 20 10 20" Grid.Column="2">
-                <icons:MessageIcon />
+            <Grid Margin="15 20 15 20" Grid.Column="2">
+                <icons:CameraIcon />
             </Grid>
             <Grid Margin="10 20 20 20" Grid.Column="3">
-                <icons:MessageIcon />
+                <icons:SettingIcon />
             </Grid>
         </Grid>
     </Grid>
