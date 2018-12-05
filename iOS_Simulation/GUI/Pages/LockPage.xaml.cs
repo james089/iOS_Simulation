@@ -12,17 +12,26 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static iOS_Simulation.Main.GV;
 
 namespace iOS_Simulation.GUI.Pages
 {
     /// <summary>
     /// Interaction logic for LockPage.xaml
     /// </summary>
-    public partial class LockPage : Page
+    public partial class LockPage : UserControl
     {
+        public static LockPage mLockPage = null;
         public LockPage()
         {
+            mLockPage = this;
             InitializeComponent();
+        }
+
+        private void UserControl_Loaded(object sender, RoutedEventArgs e)
+        {
+            lbl_time.Content = $"{DateTime.Now: HH:mm}";
+            lbl_date.Content = $"{DateTime.Now.DayOfWeek}, {(Months)DateTime.Today.Date.Month} {DateTime.Today.Date.Day}";
         }
     }
 }

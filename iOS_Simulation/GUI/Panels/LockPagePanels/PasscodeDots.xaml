@@ -1,0 +1,27 @@
+﻿<UserControl x:Class="iOS_Simulation.GUI.Panels.LockPagePanels.PasscodeDots"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:iOS_Simulation.GUI.Panels.LockPagePanels"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="300">
+    <Viewbox>
+        <Grid Height="50" Width="300">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border x:Name="Dot1" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15"/>
+            <Border x:Name="Dot2" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15" Grid.Column="1"/>
+            <Border x:Name="Dot3" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15" Grid.Column="2"/>
+            <Border x:Name="Dot4" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15" Grid.Column="3"/>
+            <Border x:Name="Dot5" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15" Grid.Column="4"/>
+            <Border x:Name="Dot6" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15" Grid.Column="5"/>
+        </Grid>
+    </Viewbox>
+</UserControl>

@@ -1,14 +1,63 @@
-﻿<Page x:Class="iOS_Simulation.GUI.Pages.LockPage"
+﻿<UserControl x:Class="iOS_Simulation.GUI.Pages.LockPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:iOS_Simulation.GUI.Pages"
+      xmlns:icon_systemStatus="clr-namespace:iOS_Simulation.GUI.Icons.SystemStatus"
+      xmlns:panels="clr-namespace:iOS_Simulation.GUI.Panels.LockPagePanels"
       mc:Ignorable="d" 
-      d:DesignHeight="950" d:DesignWidth="500"
-      Title="LockPage">
+      d:DesignHeight="1000" d:DesignWidth="500" Loaded="UserControl_Loaded">
 
-    <Grid>
+    <Grid Margin="32" Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <Border x:Name="Wallpaper" Margin="0" Grid.RowSpan="4" Opacity="1">
+            <Border.Background>
+                <ImageBrush ImageSource="/iOS_Simulation;component/Resources/Wallpaper/wallpaper2.jpg"/>
+            </Border.Background>
+        </Border>
         
+        <Border x:Name="Grid_titleBar" Background="Transparent" CornerRadius="50 50 0 0">
+            <Grid Margin="20 0 10 0" >
+                <Label Content="iPhone" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" />
+                <icon_systemStatus:Signal HorizontalAlignment="Right" Height="15"/>
+            </Grid>
+        </Border>
+
+        <icon_systemStatus:LockIcon Margin="0" Grid.Row="1"/>
+
+        <Grid Grid.Row="2" x:Name="Grid_middle_info" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="3.5*"/>
+                <RowDefinition Height="1.5*"/>
+                <RowDefinition Height="7.5*"/>
+            </Grid.RowDefinitions>
+            <Label x:Name="lbl_time" Content="15:45" Grid.Row="0" Foreground="White" FontSize="110" FontFamily="Segoe UI Light" Margin="0,-10,0,0" HorizontalAlignment="Center"/>
+            <Label x:Name="lbl_date" Content="T, d 4" Grid.Row="1" Foreground="White" FontSize="30" />
+        </Grid>
+
+        <Grid Grid.Row="2" x:Name="Grid_middle_pass" Visibility="Visible">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="7.5*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Label Content="Enter Passcode" FontSize="36" Foreground="White" VerticalAlignment="Bottom"/>
+            <panels:PasscodeDots Grid.Row="1" Height="40"/>
+            <panels:NumberPad Grid.Row="2" Margin="40"/>
+
+        </Grid>
+
+        <Grid x:Name="Grid_bottomBar" Grid.Row="3">
+            <Rectangle Width="200" Fill="White" Opacity="0.6" Height="10" RadiusX="5" RadiusY="5"/>
+        </Grid>
+
     </Grid>
-</Page>
+</UserControl>

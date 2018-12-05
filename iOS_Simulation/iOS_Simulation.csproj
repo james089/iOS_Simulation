@@ -77,6 +77,9 @@
     <Compile Include="GUI\Icons\Apps\BaseIcon.xaml.cs">
       <DependentUpon>BaseIcon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Icons\SystemStatus\LockIcon.xaml.cs">
+      <DependentUpon>LockIcon.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Icons\SystemStatus\Signal.xaml.cs">
       <DependentUpon>Signal.xaml</DependentUpon>
     </Compile>
@@ -89,12 +92,22 @@
     <Compile Include="GUI\Pages\WidgetPage.xaml.cs">
       <DependentUpon>WidgetPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Panels\LockPagePanels\NumberButton.xaml.cs">
+      <DependentUpon>NumberButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Panels\LockPagePanels\NumberPad.xaml.cs">
+      <DependentUpon>NumberPad.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Panels\LockPagePanels\PasscodeDots.xaml.cs">
+      <DependentUpon>PasscodeDots.xaml</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Panels\Screens\Screen1.xaml.cs">
       <DependentUpon>Screen1.xaml</DependentUpon>
     </Compile>
     <Compile Include="GUI\Panels\SystemPanels\ScreenSwitcher.xaml.cs">
       <DependentUpon>ScreenSwitcher.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Main\GF.cs" />
     <Compile Include="Main\GV.cs" />
     <Compile Include="Services\GUIUpdateService.cs" />
     <Compile Include="Theme\CustomControls\FaderFrame.cs" />
@@ -126,6 +139,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="GUI\Icons\SystemStatus\LockIcon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="GUI\Icons\SystemStatus\Signal.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,6 +156,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="GUI\Pages\WidgetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Panels\LockPagePanels\NumberButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Panels\LockPagePanels\NumberPad.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="GUI\Panels\LockPagePanels\PasscodeDots.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -201,7 +230,9 @@
   <ItemGroup>
     <Resource Include="Resources\Wallpaper\wallpaper1.jpg" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Resources\Wallpaper\wallpaper2.jpg" />
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\APP_icons\appStore.png" />
     <Resource Include="Resources\APP_icons\message.png" />

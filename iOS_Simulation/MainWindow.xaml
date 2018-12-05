@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:iOS_Simulation"
         xmlns:customcontrols="clr-namespace:iOS_Simulation.Theme.CustomControls"
+        xmlns:pages="clr-namespace:iOS_Simulation.GUI.Pages"
         xmlns:icon_systemStatus="clr-namespace:iOS_Simulation.GUI.Icons.SystemStatus"
         mc:Ignorable="d"
         Title="MainWindow" Height="1050" Width="500" WindowStartupLocation="CenterScreen" 
-        AllowsTransparency="True" Topmost="True" ResizeMode="NoResize" WindowStyle="None" Background="Transparent" Loaded="Window_Loaded" >
+        AllowsTransparency="True" Topmost="True" ResizeMode="NoResize" WindowStyle="None" Background="Transparent" Loaded="Window_Loaded" MouseDown="Window_MouseDown" >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -20,28 +21,38 @@
             </Border.Background>
         </Border>
         <Border x:Name="Grid_wholeSimulationArea" Grid.RowSpan="1" CornerRadius="50">
-            <Border.Background>
-                <ImageBrush ImageSource="Resources/IPhone_X.png"/>
-            </Border.Background>
             <Grid Margin="32">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Border x:Name="Grid_titleBar" Background="Transparent" CornerRadius="50 50 0 0" MouseDown="Grid_titleBar_MouseDown">
+                <Border x:Name="Grid_titleBar" Background="Transparent" CornerRadius="50 50 0 0">
                     <Grid Margin="20 0 10 0" >
                         <Label x:Name="lbl_time" Content="1:00" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" />
                         <icon_systemStatus:Signal HorizontalAlignment="Right" Height="15"/>
                     </Grid>
                 </Border>
 
-                <!--<Grid x:Name="WallPaper" Grid.Row="0" Grid.RowSpan="2" Panel.ZIndex="-2" Opacity="0.8" >
-                    <Image Source="Resources/Wallpaper/wallpaper1.jpg" Stretch="Fill" />
-                    <Border Background="#4CFFFFFF" />
-                </Grid>-->
                 <customcontrols:FaderFrame x:Name="mFrame" Grid.Row="1" NavigationUIVisibility="Hidden" />
             </Grid>
 
+        </Border>
+
+        <pages:LockPage RenderTransformOrigin="0.5,0.5" >
+            <pages:LockPage.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform Y="-0"/>
+                </TransformGroup>
+            </pages:LockPage.RenderTransform>
+        </pages:LockPage>
+
+        <Border x:Name="Border_phoneFrame" Visibility="Visible" Panel.ZIndex="0">
+            <Border.Background>
+                <ImageBrush ImageSource="Resources/IPhone_X.png"/>
+            </Border.Background>
         </Border>
         <Grid x:Name="Grid_gestureArea_bottom" Height="32" VerticalAlignment="Bottom" Panel.ZIndex="10"
               MouseDown="Grid_gestureArea_bottom_MouseDown" MouseUp="Grid_gestureArea_bottom_MouseUp" Background="Transparent" MouseMove="Grid_gestureArea_bottom_MouseMove">

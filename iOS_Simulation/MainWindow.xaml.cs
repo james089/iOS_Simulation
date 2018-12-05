@@ -43,7 +43,7 @@ namespace iOS_Simulation
             UINavigation.GoToHomePage();
         }
 
-        private void Grid_titleBar_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {
             DragMove();
         }
@@ -79,5 +79,6 @@ namespace iOS_Simulation
         {
             return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
         }
+
     }
 }

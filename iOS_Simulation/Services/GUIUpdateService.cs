@@ -6,7 +6,9 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
+using static iOS_Simulation.Main.GV;
 using static iOS_Simulation.MainWindow;
+using static iOS_Simulation.GUI.Pages.LockPage;
 
 namespace iOS_Simulation.Services
 {
@@ -42,7 +44,9 @@ namespace iOS_Simulation.Services
 
         private static void mUpdateRoutine_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
-            mMainWindow.lbl_time.Content = $"{DateTime.Now : h:mm}";
+            mMainWindow.lbl_time.Content = $"{DateTime.Now : HH:mm}";
+            mLockPage.lbl_time.Content = $"{DateTime.Now: HH:mm}";
+            mLockPage.lbl_date.Content = $"{DateTime.Now.DayOfWeek}, {(Months)DateTime.Today.Date.Month} {DateTime.Today.Date.Day}";
         }
 
         private static void mUpdateRoutine_WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)

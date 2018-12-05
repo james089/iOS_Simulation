@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="iOS_Simulation.GUI.Icons.SystemStatus.LockIcon"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:iOS_Simulation.GUI.Icons.SystemStatus"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300">
+    <Viewbox>
+        <Grid Height="100" Width="100">
+            <Border x:Name="ColorPicker" Background="White" Visibility="Collapsed"/>
+            <Rectangle Fill="{Binding Path=Background, ElementName=ColorPicker}" VerticalAlignment="Bottom" Height="60" Width="70" RadiusX="5" RadiusY="5" />
+            <Rectangle Width="50" Stroke="{Binding Path=Background, ElementName=ColorPicker}" StrokeThickness="10" RadiusX="20" RadiusY="20" Clip="M-25,0 L75,0 L75,40 L-25,40 z" RenderTransformOrigin="0.5,0.5">
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform ScaleY="1" ScaleX="1"/>
+                        <SkewTransform AngleY="0" AngleX="0"/>
+                        <RotateTransform Angle="0"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+        </Grid>
+    </Viewbox>
+</UserControl>
