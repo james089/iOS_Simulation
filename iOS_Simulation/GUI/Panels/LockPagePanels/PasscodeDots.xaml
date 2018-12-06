@@ -16,12 +16,12 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Border x:Name="Dot1" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15"/>
-            <Border x:Name="Dot2" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15" Grid.Column="1"/>
-            <Border x:Name="Dot3" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15" Grid.Column="2"/>
-            <Border x:Name="Dot4" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15" Grid.Column="3"/>
-            <Border x:Name="Dot5" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15" Grid.Column="4"/>
-            <Border x:Name="Dot6" BorderBrush="White" BorderThickness="2" Width="30" Height="30" CornerRadius="15" Grid.Column="5"/>
+            <Border x:Name="Dot1" BorderBrush="White" BorderThickness="2" Width="20" Height="20" CornerRadius="15"/>
+            <Border x:Name="Dot2" BorderBrush="White" BorderThickness="2" Width="20" Height="20" CornerRadius="15" Grid.Column="1"/>
+            <Border x:Name="Dot3" BorderBrush="White" BorderThickness="2" Width="20" Height="20" CornerRadius="15" Grid.Column="2"/>
+            <Border x:Name="Dot4" BorderBrush="White" BorderThickness="2" Width="20" Height="20" CornerRadius="15" Grid.Column="3"/>
+            <Border x:Name="Dot5" BorderBrush="White" BorderThickness="2" Width="20" Height="20" CornerRadius="15" Grid.Column="4"/>
+            <Border x:Name="Dot6" BorderBrush="White" BorderThickness="2" Width="20" Height="20" CornerRadius="15" Grid.Column="5"/>
         </Grid>
     </Viewbox>
 </UserControl>

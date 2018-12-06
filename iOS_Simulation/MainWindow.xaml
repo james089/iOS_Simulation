@@ -38,7 +38,7 @@
 
         </Border>
 
-        <pages:LockPage RenderTransformOrigin="0.5,0.5" >
+        <pages:LockPage x:Name="mLockPage" RenderTransformOrigin="0.5,0.5" >
             <pages:LockPage.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -59,7 +59,11 @@
         </Grid>
 
         <Grid x:Name="Grid_debugArea" Grid.Row="1">
-            <Label x:Name="lbl_debug" Content="" Foreground="White"/>
+            <DockPanel>
+                <Button x:Name="Btn_close" Style="{DynamicResource Button_close}" Click="Btn_close_Click" Margin="2"/>
+                <Button x:Name="Btn_lock" Content="Lock" Width="50" Margin="2" Click="Btn_lock_Click" Visibility="Collapsed"/>
+                <CheckBox x:Name="Chk_phoneFrame" Content="Phone Frame" HorizontalAlignment="Right" Foreground="White" Checked="Chk_phoneFrame_Checked" Unchecked="Chk_phoneFrame_Checked"/>
+            </DockPanel>
         </Grid>
     </Grid>
 </Window>

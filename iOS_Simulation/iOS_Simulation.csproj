@@ -107,9 +107,12 @@
     <Compile Include="GUI\Panels\SystemPanels\ScreenSwitcher.xaml.cs">
       <DependentUpon>ScreenSwitcher.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Main\Colors.cs" />
     <Compile Include="Main\GF.cs" />
     <Compile Include="Main\GV.cs" />
     <Compile Include="Services\GUIUpdateService.cs" />
+    <Compile Include="Theme\Animations\AniSettings.cs" />
+    <Compile Include="Theme\Animations\AniShape.cs" />
     <Compile Include="Theme\CustomControls\FaderFrame.cs" />
     <Page Include="GUI\Icons\Apps\CalendarIcon.xaml">
       <Generator>MSBuild:Compile</Generator>

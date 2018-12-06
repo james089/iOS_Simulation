@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using iOS_Simulation.GUI.Pages;
 using iOS_Simulation.GUI.Helpers;
+using static iOS_Simulation.Properties.Settings;
 
 namespace iOS_Simulation
 {
@@ -35,6 +36,9 @@ namespace iOS_Simulation
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             GUIUpdateService.StartUpdateRoutine();
+
+            Chk_phoneFrame.IsChecked = Default.IsShowPhoneFrame;
+            Chk_phoneFrame_Checked(null , null);
 
             Uri homeUri = MainPage.pageUri;
             Frame pFrame = mFrame;
@@ -61,7 +65,7 @@ namespace iOS_Simulation
         private void Grid_gestureArea_bottom_MouseDown(object sender, MouseButtonEventArgs e)
         {
             isMouseDown = true;
-            lbl_debug.Content = $"{e.GetPosition(Grid_wholeSimulationArea).X}, {e.GetPosition(Grid_wholeSimulationArea).Y}";
+            Console.WriteLine($"{e.GetPosition(Grid_wholeSimulationArea).X}, {e.GetPosition(Grid_wholeSimulationArea).Y}");
         }
         #endregion Gestures
 
@@ -80,5 +84,21 @@ namespace iOS_Simulation
             return Math.Sqrt(Math.Pow(p1.X - p2.X, 2) + Math.Pow(p1.Y - p2.Y, 2));
         }
 
+        private void Chk_phoneFrame_Checked(object sender, RoutedEventArgs e)
+        {
+            Border_phoneFrame.Visibility = (bool)Chk_phoneFrame.IsChecked ? Visibility.Visible : Visibility.Collapsed;
+            Default.IsShowPhoneFrame = (bool)Chk_phoneFrame.IsChecked;
+            Default.Save();
+        }
+
+        private void Btn_close_Click(object sender, RoutedEventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private void Btn_lock_Click(object sender, RoutedEventArgs e)
+        {
+            mLockPage.Lock();
+        }
     }
 }

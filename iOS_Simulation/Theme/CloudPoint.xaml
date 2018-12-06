@@ -75,9 +75,9 @@
     <SolidColorBrush x:Key="DarkGreenColor">#FF004414</SolidColorBrush>
 
     <!-- Color used on control-->
-    <SolidColorBrush x:Key="ActiveColor">#FF00A3FF</SolidColorBrush>
+    <SolidColorBrush x:Key="ActiveColor">#72FFFFFF</SolidColorBrush>
     <!-- BlueColor(light) -->
-    <SolidColorBrush x:Key="InactiveColor">#FF006EA2</SolidColorBrush>
+    <SolidColorBrush x:Key="InactiveColor">#B2878789</SolidColorBrush>
     <!-- DarkerBlue -->
     <SolidColorBrush x:Key="HoverShineColor">#338B8B8B</SolidColorBrush>
     <!-- Gray -->
@@ -85,8 +85,8 @@
     <!-- Gray -->
 
     <LinearGradientBrush x:Key="ButtonBrush" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#FF00A3FF" Offset="0"/>
-        <GradientStop Color="#FF00A3FF" Offset="1"/>
+        <GradientStop Color="#72FFFFFF" Offset="0"/>
+        <GradientStop Color="#72FFFFFF" Offset="1"/>
     </LinearGradientBrush>
 
     <!-- ========================================================================Styles=======================================================  -->
@@ -715,7 +715,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsChecked" Value="True">
                             <Setter TargetName="Button" Property="Margin" Value="81,1,-79,1" />
-                            <Setter TargetName="Background" Property="Fill" Value="{DynamicResource ActiveColor}" />
+                            <Setter TargetName="Background" Property="Fill" Value="{DynamicResource GreenColor}" />
                         </Trigger>
                         <Trigger Property="IsChecked" Value="False">
                             <Setter TargetName="Button" Property="Margin" Value="1" />

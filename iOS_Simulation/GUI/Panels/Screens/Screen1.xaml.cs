@@ -1,4 +1,5 @@
-﻿using System;
+﻿using iOS_Simulation.Theme.Animations;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace iOS_Simulation.GUI.Panels.Screens
         public Screen1()
         {
             InitializeComponent();
+        }
+
+        public void LoadApps()
+        {
+            AniShape.moveXY(Grid_00, -100, 0, -100, 0, 0.3);
+            AniShape.moveXY(Grid_01, -100, 0, -60, 0, 0.3);
         }
     }
 }

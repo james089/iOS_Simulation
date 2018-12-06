@@ -19,7 +19,7 @@
             <Border Background="#4CFFFFFF" />
         </Grid>
         <Grid x:Name="Grid_appsHolder" >
-            <screens:Screen1 />
+            <screens:Screen1 x:Name="mScreen1" />
         </Grid>
         <Grid x:Name="Grid_screenSwitcher" Grid.Row="1">
             

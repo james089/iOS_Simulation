@@ -18,15 +18,15 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <local:NumberButton x:Name="Btn_1" Content="1" ExTxt="" Margin="10" Click="Btn_1_Click"/>
-        <local:NumberButton Content="2" ExTxt="A B C" Grid.Row="0" Grid.Column="1" Margin="10"/>
-        <local:NumberButton Content="3" ExTxt="D E F" Grid.Row="0" Grid.Column="2" Margin="10"/>
-        <local:NumberButton Content="4" ExTxt="G H I" Grid.Row="1" Grid.Column="0" Margin="10"/>
-        <local:NumberButton Content="5" ExTxt="J K L" Grid.Row="1" Grid.Column="1" Margin="10"/>
-        <local:NumberButton Content="6" ExTxt="M N O" Grid.Row="1" Grid.Column="2" Margin="10"/>
-        <local:NumberButton Content="7" ExTxt="P Q R S" Grid.Row="2" Grid.Column="0" Margin="10"/>
-        <local:NumberButton Content="8" ExTxt="T U V" Grid.Row="2" Grid.Column="1" Margin="10"/>
-        <local:NumberButton Content="9" ExTxt="W X Y Z" Grid.Row="2" Grid.Column="2" Margin="10"/>
-        <local:NumberButton Content="0" ExTxt="" Grid.Row="3" Grid.Column="1" Margin="10"/>
+        <local:NumberButton x:Name="Btn_1" Content="1" ExTxt="" Margin="15" Click="Btn_Click"/>
+        <local:NumberButton x:Name="Btn_2" Content="2" ExTxt="A B C" Grid.Row="0" Grid.Column="1" Margin="15" Click="Btn_Click"/>
+        <local:NumberButton x:Name="Btn_3" Content="3" ExTxt="D E F" Grid.Row="0" Grid.Column="2" Margin="15" Click="Btn_Click"/>
+        <local:NumberButton x:Name="Btn_4" Content="4" ExTxt="G H I" Grid.Row="1" Grid.Column="0" Margin="15" Click="Btn_Click"/>
+        <local:NumberButton x:Name="Btn_5" Content="5" ExTxt="J K L" Grid.Row="1" Grid.Column="1" Margin="15" Click="Btn_Click"/>
+        <local:NumberButton x:Name="Btn_6" Content="6" ExTxt="M N O" Grid.Row="1" Grid.Column="2" Margin="15" Click="Btn_Click"/>
+        <local:NumberButton x:Name="Btn_7" Content="7" ExTxt="P Q R S" Grid.Row="2" Grid.Column="0" Margin="15" Click="Btn_Click"/>
+        <local:NumberButton x:Name="Btn_8" Content="8" ExTxt="T U V" Grid.Row="2" Grid.Column="1" Margin="15" Click="Btn_Click"/>
+        <local:NumberButton x:Name="Btn_9" Content="9" ExTxt="W X Y Z" Grid.Row="2" Grid.Column="2" Margin="15" Click="Btn_Click"/>
+        <local:NumberButton x:Name="Btn_0" Content="0" ExTxt="" Grid.Row="3" Grid.Column="1" Margin="15" Click="Btn_Click"/>
     </Grid>
 </UserControl>
